@@ -144,6 +144,7 @@ public class VideoPlayer extends CordovaPlugin implements OnCompletionListener, 
         main.addView(videoView);
 
         player = new MediaPlayer();
+        player.setLooping(true);
         player.setOnPreparedListener(this);
         player.setOnCompletionListener(this);
         player.setOnErrorListener(this);
