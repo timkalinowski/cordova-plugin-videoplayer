@@ -138,13 +138,13 @@ public class VideoPlayer extends CordovaPlugin implements OnCompletionListener, 
         main.setVerticalGravity(Gravity.CENTER_VERTICAL);
 
         videoView = new VideoView(cordova.getActivity());
-        videoView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
+        videoView.setLayoutParams(new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT/2, LayoutParams.MATCH_PARENT/2));
         // videoView.setVideoURI(uri);
         // videoView.setVideoPath(path);
         main.addView(videoView);
 
         player = new MediaPlayer();
-        player.setLooping(true);
+        //player.setLooping(true);
         player.setOnPreparedListener(this);
         player.setOnCompletionListener(this);
         player.setOnErrorListener(this);
